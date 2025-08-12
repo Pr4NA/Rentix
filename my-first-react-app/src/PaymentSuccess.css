@@ -1,0 +1,44 @@
+/* PaymentSuccess.css */
+.success-container {
+  text-align: center;
+  padding-top: 80px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tick-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tick-mark {
+  stroke: #4BB543;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: circle-animate 0.6s ease-out forwards;
+}
+
+.check {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: check-animate 0.3s 0.6s ease-out forwards;
+}
+
+@keyframes circle-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes check-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

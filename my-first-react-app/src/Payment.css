@@ -1,0 +1,226 @@
+/* === Container Styling === */
+.payment-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* === Left Section === */
+.payment-left {
+  width: 40%;
+  background-color: #FFD700;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.payment-left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.payment-left h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-left p {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* === Right Section === */
+.payment-right {
+  width: 60%;
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+/* === Form Styling === */
+.payment-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Label Styling === */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* === Input / Select Styling === */
+.payment-form input,
+.userSelect {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s, background-color 0.3s;
+  background-color: #fff;
+  outline: none;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.payment-form input:focus:invalid,
+.userSelect:focus:invalid {
+  border-color: red;
+  background-color: #fff5f5;
+}
+
+.payment-form input:focus:valid,
+.userSelect:focus:valid {
+  border-color: #28a745;
+  background-color: #ffffff;
+}
+
+.input-error {
+  border: 2px solid red !important;
+  background-color: #fff5f5 !important;
+}
+
+input.input-error:focus,
+.userSelect.input-error:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+}
+
+/* === Buttons Styling === */
+.payment-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.submit-btn,
+.pay-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: 48%;
+}
+
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+.pay-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.pay-btn:hover {
+  background-color: #0069d9;
+}
+
+/* === Select Dropdown Enhancements === */
+.userSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 36px;
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  .payment-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .payment-left,
+  .payment-right {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .payment-buttons {
+    flex-direction: column;
+  }
+
+  .submit-btn,
+  .pay-btn {
+    width: 100%;
+  }
+}
+Select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+  padding: 12px;
+  padding-right: 36px; /* space for arrow */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  transition: border 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Focus styles */
+Select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* Invalid focus and blur */
+Select:focus:invalid {
+  border-color: red;
+  background-color: #fff5f5;
+}
+
+Select:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: red;
+  background-color: #fff5f5;
+}
+
+/* Valid state */
+Select:focus:valid {
+  border-color: #28a745;
+  background-color: #ffffff;
+}
+
+/* When input-error class is applied */
+Select.input-error {
+  border: 2px solid red !important;
+  background-color: #fff5f5 !important;
+}
